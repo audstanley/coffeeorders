@@ -10,7 +10,9 @@
 	},
 
 	"extensions": [
-		"dbaeumer.vscode-eslint"
+		"dbaeumer.vscode-eslint", "humao.rest-client", 
+		"dbaeumer.jshint", "hookyqr.beautify",
+		"eg2.vscode-npm-script", "christian-kohler.npm-intellisense",
 	],
 
 	"forwardPorts": [ 3000 ],
