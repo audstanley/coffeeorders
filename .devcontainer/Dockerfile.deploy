@@ -1,0 +1,9 @@
+ARG VARIANT="14"
+FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
+
+RUN cd / \
+    && npm install -g nodemon diskdb express \
+    && git clone --branch master https://github.com/audstanley/coffeeorders \
+    && mv coffeeorders code \
+    && cd code \
+    && chmod +x entrypoint.sh;
