@@ -1,3 +1,4 @@
 #!/bin/bash
-cd /code/src/;
+cd /code;
+npm i;
 npm run start;
