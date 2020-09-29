@@ -1,9 +1,11 @@
 // install the "REST Client" extension in VSCode.
-GET http://localhost:3000/coffeeorders HTTP/1.1
+@baseUrl=localhost:3000
+
+GET http://{{baseUrl}}/coffeeorders HTTP/1.1
 
 ###
 
-POST http://localhost:3000/coffeeorders HTTP/1.1
+POST http://{{baseUrl}}/coffeeorders HTTP/1.1
 content-type: application/json
 
 {
@@ -16,15 +18,15 @@ content-type: application/json
 ###
 
 # deletes all the orders from the collection
-DELETE http://localhost:3000/coffeeorders HTTP/1.1
+DELETE http://{{baseUrl}}/coffeeorders HTTP/1.1
 
 ###
 
-GET http://localhost:3000/coffeeorders/audstanley@gmail.com HTTP/1.1
+GET http://{{baseUrl}}/coffeeorders/audstanley@gmail.com HTTP/1.1
 
 ###
 
-PUT http://localhost:3000/coffeeorders/audstanley@gmail.com HTTP/1.1
+PUT http://{{baseUrl}}/coffeeorders/audstanley@gmail.com HTTP/1.1
 content-type: application/json
 
 {
@@ -37,4 +39,4 @@ content-type: application/json
 ###
 
 # only delete audstanley's last order
-DELETE http://localhost:3000/coffeeorders/audstanley@gmail.com HTTP/1.1
+DELETE http://{{baseUrl}}/coffeeorders/audstanley@gmail.com HTTP/1.1
