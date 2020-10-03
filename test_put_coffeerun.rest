@@ -9,7 +9,7 @@ content-type: application/json
 
 {
     "coffee": "earl grey",
-    "email": "jlpicard@starfleet.com",
+    "emailAddress": "jlpicard@starfleet.com",
     "flavor": "Vanilla",
     "strength": "80"
 }
@@ -22,7 +22,7 @@ content-type: application/json
 
 {
     "coffee": "double espresso",
-    "email": "audstanley@gmail.com",
+    "emailAddress": "audstanley@gmail.com",
     "flavor": "Mocha",
     "strength": "100"
 }

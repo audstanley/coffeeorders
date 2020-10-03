@@ -34,20 +34,20 @@ app.delete('/coffeeorders', (req, res) => {
 });
 
 // email routes.
-app.get('/coffeeorders/:email', (req, res) => {
-    const email = req.params.email;
-    console.log(`looking for: ${email}`);
+app.get('/coffeeorders/:emailAddress', (req, res) => {
+    const emailAddress = req.params.emailAddress;
+    console.log(`looking for: ${emailAddress}`);
     db.connect('./data', ['coffeeorders']);
-    let record = db.coffeeorders.find( { email: email } );
+    let record = db.coffeeorders.find( { emailAddress: emailAddress } );
     if (record) res.status(200).json(record);
     else res.statusCode(404);
 });
 
-app.put('/coffeeorders/:email', (req, res) => {
-    const email = req.params.email;
-    console.log(`looking for: ${email}`);
+app.put('/coffeeorders/:emailAddress', (req, res) => {
+    const emailAddress = req.params.emailAddress;
+    console.log(`looking for: ${emailAddress}`);
     db.connect('./data', ['coffeeorders']);
-    let record = db.coffeeorders.findOne( { email: email } );
+    let record = db.coffeeorders.findOne( { emailAddress: emailAddress } );
     console.log(`PUT: ${JSON.stringify(record,null,2)}`);
     if (record) {
         try {
@@ -64,11 +64,11 @@ app.put('/coffeeorders/:email', (req, res) => {
     else res.status(404);
 });
 
-app.delete('/coffeeorders/:email', (req, res) => {
-    const email = req.params.email;
-    console.log(`looking for: ${email}`);
+app.delete('/coffeeorders/:emailAddress', (req, res) => {
+    const emailAddress = req.params.emailAddress;
+    console.log(`looking for: ${emailAddress}`);
     db.connect('./data', ['coffeeorders']);
-    let record = db.coffeeorders.findOne( { email: email } );
+    let record = db.coffeeorders.findOne( { emailAddress: emailAddress } );
     if (record) {
         db.coffeeorders.remove( { _id: record._id }, false );
         res.status(200);

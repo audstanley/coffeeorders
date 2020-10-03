@@ -9,7 +9,7 @@ content-type: application/json
 
 {
     "coffee": "triple espresso",
-    "email": "audstanley@gmail.com",
+    "emailAddress": "audstanley@gmail.com",
     "flavor": "Pumpkin Spice",
     "strength": "100"
 }
@@ -22,7 +22,7 @@ content-type: application/json
 
 {
     "coffee": "espresso",
-    "email": "aeinstein@aol.com",
+    "emailAddress": "aeinstein@aol.com",
     "flavor": "Mocha",
     "strength": "80"
 }
@@ -35,7 +35,7 @@ content-type: application/json
 
 {
     "coffee": "americano",
-    "email": "sjobs@apple.com",
+    "emailAddress": "sjobs@apple.com",
     "flavor": "Caramel",
     "strength": "60"
 }
@@ -48,7 +48,7 @@ content-type: application/json
 
 {
     "coffee": "earl grey",
-    "email": "jlpicard@starfleet.com",
+    "emailAddress": "jlpicard@starfleet.com",
     "flavor": "None",
     "strength": "80"
 }
