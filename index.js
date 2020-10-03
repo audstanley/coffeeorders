@@ -40,7 +40,7 @@ app.get('/coffeeorders/:emailAddress', (req, res) => {
     db.connect('./data', ['coffeeorders']);
     let record = db.coffeeorders.find( { emailAddress: emailAddress } );
     if (record) res.status(200).json(record);
-    else res.statusCode(404);
+    else res.sendStatus(404);
 });
 
 app.put('/coffeeorders/:emailAddress', (req, res) => {
@@ -61,7 +61,7 @@ app.put('/coffeeorders/:emailAddress', (req, res) => {
             res.status(500).json({"error": `${e}`});
         }
     }
-    else res.status(404);
+    else res.sendStatus(404);
 });
 
 app.delete('/coffeeorders/:emailAddress', (req, res) => {
@@ -71,9 +71,9 @@ app.delete('/coffeeorders/:emailAddress', (req, res) => {
     let record = db.coffeeorders.findOne( { emailAddress: emailAddress } );
     if (record) {
         db.coffeeorders.remove( { _id: record._id }, false );
-        res.status(200);
+        res.sendStatus(200);
     }
-    else res.status(404);
+    else res.sendStatus(404);
 });
  
 app.listen(3000);
