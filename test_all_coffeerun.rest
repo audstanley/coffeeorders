@@ -1,20 +1,21 @@
 // install the "REST Client" extension in VSCode.
-@baseUrl=co.audstanley.com
+@baseUrl={{$dotenv baseUrl}}
+
 
 ###
 
 # deletes all the orders from the collection
-DELETE http://{{baseUrl}}/coffeeorders HTTP/1.1
+DELETE {{baseUrl}}/coffeeorders HTTP/1.1
 
 ###
 
 # get all orders
-GET http://{{baseUrl}}/coffeeorders HTTP/1.1
+GET {{baseUrl}}/coffeeorders HTTP/1.1
 
 ###
 
 # add new order for triple espresso
-POST http://{{baseUrl}}/coffeeorders HTTP/1.1
+POST {{baseUrl}}/coffeeorders HTTP/1.1
 content-type: application/json
 
 {
@@ -27,7 +28,7 @@ content-type: application/json
 ###
 
 # add new order for espresso
-POST http://{{baseUrl}}/coffeeorders HTTP/1.1
+POST {{baseUrl}}/coffeeorders HTTP/1.1
 content-type: application/json
 
 {
@@ -40,7 +41,7 @@ content-type: application/json
 ###
 
 # add new order for americano
-POST http://{{baseUrl}}/coffeeorders HTTP/1.1
+POST {{baseUrl}}/coffeeorders HTTP/1.1
 content-type: application/json
 
 {
@@ -53,7 +54,7 @@ content-type: application/json
 ###
 
 # add new order for earl grey
-POST http://{{baseUrl}}/coffeeorders HTTP/1.1
+POST {{baseUrl}}/coffeeorders HTTP/1.1
 content-type: application/json
 
 {
@@ -66,30 +67,30 @@ content-type: application/json
 ###
 
 # get all orders
-GET http://{{baseUrl}}/coffeeorders HTTP/1.1
+GET {{baseUrl}}/coffeeorders HTTP/1.1
 
 ###
 
 # get any order from audstanley@gmail.com
 
-GET http://{{baseUrl}}/coffeeorders/audstanley@gmail.com HTTP/1.1
+GET {{baseUrl}}/coffeeorders/audstanley@gmail.com HTTP/1.1
 
 ###
 
 # get any order from sjobs@apple.com
 
-GET http://{{baseUrl}}/coffeeorders/sjobs@apple.com HTTP/1.1
+GET {{baseUrl}}/coffeeorders/sjobs@apple.com HTTP/1.1
 
 ###
 
 # get any order from jbezos@amazon.com (should be none)
 
-GET http://{{baseUrl}}/coffeeorders/jbezos@amazon.com HTTP/1.1
+GET {{baseUrl}}/coffeeorders/jbezos@amazon.com HTTP/1.1
 
 ###
 
 # update flavor for jlpicard@starfleet.com's order
-PUT http://{{baseUrl}}/coffeeorders/jlpicard@starfleet.com HTTP/1.1
+PUT {{baseUrl}}/coffeeorders/jlpicard@starfleet.com HTTP/1.1
 content-type: application/json
 
 {
@@ -102,7 +103,7 @@ content-type: application/json
 ###
 
 # update coffee and flavor for audstanley@gmail.com's order
-PUT http://{{baseUrl}}/coffeeorders/audstanley@gmail.com HTTP/1.1
+PUT {{baseUrl}}/coffeeorders/audstanley@gmail.com HTTP/1.1
 content-type: application/json
 
 {
@@ -115,15 +116,15 @@ content-type: application/json
 ###
 
 # get all orders
-GET http://{{baseUrl}}/coffeeorders HTTP/1.1
+GET {{baseUrl}}/coffeeorders HTTP/1.1
 
 ###
 
 # only delete jlpicard@starfleet.com's last order
-DELETE http://{{baseUrl}}/coffeeorders/jlpicard@starfleet.com HTTP/1.1
+DELETE {{baseUrl}}/coffeeorders/jlpicard@starfleet.com HTTP/1.1
 
 ###
 
 # get all orders
-GET http://{{baseUrl}}/coffeeorders HTTP/1.1
+GET {{baseUrl}}/coffeeorders HTTP/1.1
 

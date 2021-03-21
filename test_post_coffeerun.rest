@@ -1,10 +1,10 @@
 // install the "REST Client" extension in VSCode.
-@baseUrl=co.audstanley.com
+@baseUrl={{$dotenv baseUrl}}
 
 ###
 
 # add new order for double espresso
-POST http://{{baseUrl}}/coffeeorders HTTP/1.1
+POST {{baseUrl}}/coffeeorders HTTP/1.1
 content-type: application/json
 
 {
@@ -17,7 +17,7 @@ content-type: application/json
 ###
 
 # add new order for espresso
-POST http://{{baseUrl}}/coffeeorders HTTP/1.1
+POST {{baseUrl}}/coffeeorders HTTP/1.1
 content-type: application/json
 
 {
@@ -30,7 +30,7 @@ content-type: application/json
 ###
 
 # add new order for americano
-POST http://{{baseUrl}}/coffeeorders HTTP/1.1
+POST {{baseUrl}}/coffeeorders HTTP/1.1
 content-type: application/json
 
 {
@@ -43,7 +43,7 @@ content-type: application/json
 ###
 
 # add new order for earl grey
-POST http://{{baseUrl}}/coffeeorders HTTP/1.1
+POST {{baseUrl}}/coffeeorders HTTP/1.1
 content-type: application/json
 
 {

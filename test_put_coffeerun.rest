@@ -1,10 +1,10 @@
 // install the "REST Client" extension in VSCode.
-@baseUrl=co.audstanley.com
+@baseUrl={{$dotenv baseUrl}}
 
 ###
 
 # update flavor for jlpicard@starfleet.com's order
-PUT http://{{baseUrl}}/coffeeorders/jlpicard@starfleet.com HTTP/1.1
+PUT {{baseUrl}}/coffeeorders/jlpicard@starfleet.com HTTP/1.1
 content-type: application/json
 
 {
@@ -17,7 +17,7 @@ content-type: application/json
 ###
 
 # update coffee and flavor for audstanley@gmail.com's order
-PUT http://{{baseUrl}}/coffeeorders/audstanley@gmail.com HTTP/1.1
+PUT {{baseUrl}}/coffeeorders/audstanley@gmail.com HTTP/1.1
 content-type: application/json
 
 {
