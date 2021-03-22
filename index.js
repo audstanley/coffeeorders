@@ -9,6 +9,10 @@ app.use(cors({
     origin: '*'
 }));
 
+app.get('/', (req, res) => {
+    res.json({status: "nothing here, are you trying to make some /coffeeorders?"});
+});
+
 app.get('/coffeeorders', (req, res) => {
     db.connect('./data', ['coffeeorders']);
     res.json(db.coffeeorders.find());
@@ -76,4 +80,4 @@ app.delete('/coffeeorders/:emailAddress', (req, res) => {
     else res.sendStatus(404);
 });
  
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
